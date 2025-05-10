@@ -1,0 +1,9 @@
+[programs.devnet]
+state_module = "St4teModu13D3mo1111111111111111111111111111111111"
+
+[provider]
+cluster = "devnet"
+wallet = "~/.config/solana/id.json"
+
+[scripts]
+test = "ts-mocha -p ./tsconfig.json tests/**/*.ts"
