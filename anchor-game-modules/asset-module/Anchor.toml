@@ -1,0 +1,9 @@
+[programs.devnet]
+asset_module = "Fg6PaFpoGXkYsidMpWxTWqoz1Rz4hG98bXok8eXEiN7z"
+
+[provider]
+cluster = "devnet"
+wallet = "~/.config/solana/id.json"
+
+[scripts]
+test = "ts-mocha -p ./tsconfig.json tests/**/*.ts"

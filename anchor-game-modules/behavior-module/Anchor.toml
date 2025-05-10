@@ -1,0 +1,6 @@
+[programs.devnet]
+behavior_module = "BehAv10rM0Du13D3m0111111111111111111111111111111"
+
+[provider]
+cluster = "devnet"
+wallet = "~/.config/solana/id.json"
