@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head><meta charset="UTF-8"><title>MCP Server</title></head>
+  <body>
+    <h2>Solana MCP Server Demo</h2>
+    <p>Tool: getBalance</p>
+    <input id="pubkey" placeholder="Enter public key"/>
+    <button onclick="send()">Query Balance</button>
+    <pre id="out"></pre>
+    <script>
+      async function send() {
+        const pubkey = document.getElementById("pubkey").value;
+        const res = await fetch("/mcp", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ tool: "getBalance", params: { pubkey } })
+        });
+        const data = await res.json();
+        document.getElementById("out").textContent = JSON.stringify(data, null, 2);
+      }
+    </script>
+  </body>
+</html>
